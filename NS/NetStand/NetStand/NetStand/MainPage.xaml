@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NetStand"
+             x:Class="NetStand.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding ="20">
+            <Label Text="List of 50 Employees"></Label>
+            <ListView x:Name="EmployeeListview">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell
+                            ImageSource="{Binding Source}"
+                            Text="{Binding Name}"
+                            Detail="{Binding Job}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
